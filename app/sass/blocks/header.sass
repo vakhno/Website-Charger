@@ -1,0 +1,120 @@
+.header
+	width: 100%
+	background-size: cover
+	background-position: center
+	position: relative
+	background-repeat: no-repeat
+	background-color: rgba(#3cd072, 1)
+	z-index: 10
+	&__container
+		min-height: 624px
+	&__content
+		padding-bottom: 60px
+	.content
+		display: grid
+		grid-template-columns: minmax(385px ,560px) 388px
+		column-gap: 18px
+		&__left
+			align-self: start
+			justify-self: start
+		&__right
+			justify-self: start
+			align-self: start
+	.left
+		&__name-site
+			padding-top: 61px
+			margin-bottom: 105px
+		&__info
+			max-width: 453px
+			margin-bottom: 12px
+		&__appstore
+			margin-bottom: 52px
+	
+	.right
+		&__iphone-black
+			position: absolute
+			margin-top: 82px
+			margin-left: -1px
+		&__iphone-white
+			margin-top: 125px
+			margin-left: 124px
+			position: absolute
+			
+	.sign-up
+		display: grid
+		grid-template-columns: minmax(200px ,296px) auto
+		column-gap: 24px
+		&__send-button
+			align-self: end
+
+
+@media only screen and (max-width: 840px)
+	.header
+
+		.content 
+
+			grid-template-columns: minmax(385px ,560px) 338px
+		.right
+			&__iphone-white
+
+				margin-top: 15px
+				margin-left: 84px
+				@include scale(0.8)
+			&__iphone-black
+				@include scale(0.8)
+
+@media only screen and (max-width: 755px)
+	.header
+		.content
+			grid-template-columns: 385px auto
+		.right
+			justify-self: end
+			align-self: center
+			&__iphone-white
+				max-width: 100%
+				height: auto
+				padding-top: 40px
+				position: relative
+				margin: 0
+				@include scale(1)
+			&__iphone-black
+				display: none
+
+@media only screen and (max-width: 625px)
+	.header
+		.content
+			grid-template-columns: 1fr
+			justify-content: center
+		.right
+			&__iphone-white
+				display: none
+		.left
+			justify-self: stretch
+		.sign-up
+			grid-template-columns: 1fr auto
+
+
+@media only screen and (max-width: 415px)
+	.header
+		.title
+			&__text
+				font-size: 
+			&__text-accent
+				font-size: 28px
+
+@media only screen and (max-width: 380px)
+	.header
+		.title
+			&__text
+				font-size: 
+			&__text-accent
+				font-size: 28px
+		.left
+			&__sign-up
+				grid-template-columns: 1fr
+		.sign-up
+			&__input-email
+				margin-bottom: 10px
+		.white-button
+			justify-self: end
+			width: 100%

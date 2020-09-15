@@ -1,0 +1,79 @@
+.nine-slide
+	width: 100%
+	background-size: cover
+	background-position: center
+	position: relative
+	background-repeat: no-repeat
+	background-color: rgba(#3cd072, 1)
+	z-index: 10
+	&__container
+		min-height: 624px
+		padding-bottom: 70px
+	.content
+		display: grid
+		grid-template-columns: minmax(200px, 456px) max-content
+		column-gap: 103px
+		&__left
+			align-self: start
+			padding-top: 92px
+		&__right
+			align-self: start
+			padding-top: 92px
+	.left
+		&__title
+			color: #000
+			font-family: 'MyriadPro', sans-serif
+			font-size: 36px
+			font-weight: 600
+			line-height: 32px
+			margin-bottom: 20px
+	.contact-form
+		&__input
+			margin-bottom: 5px
+			label
+				margin-bottom: 0
+			&:last-of-type
+				margin-bottom: 30px
+	.send-button
+		width: 216px
+		background-color: #000
+		color: #fff
+	.right
+		&__title
+			color: #000
+			font-family: 'MyriadPro', sans-serif
+			font-size: 36px
+			font-weight: 600
+			line-height: 32px
+			margin-bottom: 20px
+	.social
+		padding-left: 1px 
+		&__item
+			display: flex
+			align-items: center
+			text-decoration: none
+			margin-bottom: 24px
+		&__icon
+			margin-right: 18px	
+		&__title
+			color: #fff
+			font-family: 'MyriadPro', sans-serif
+			font-size: 24px
+			font-weight: 600
+			line-height: 24px
+			display: inline
+			letter-spacing: 0.1px
+			margin-bottom: -1px
+
+@media only screen and (max-width: 566px)
+	.nine-slide
+		.content
+			grid-template-columns: 1fr
+			column-gap: 0
+			padding-bottom: 50px
+			&__right
+				align-self: start
+				justify-self: center
+				padding-top: 42px
+		.contact-button
+			width: 100%

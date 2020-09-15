@@ -1,0 +1,41 @@
+.input-transparent
+	&__label
+		color: #fff
+		font-family: 'MyriadPro', sans-serif
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		display: block	
+		margin-bottom: 8px
+	&__area
+		border: 2px solid #fff
+		height: 48px
+		width: 100%
+		padding: 0 13px
+		background-color: transparent
+		font-family: 'MyriadPro', sans-serif
+		font-weight: 600
+		color: #fff
+		font-size: 16px
+		&::placeholder
+			color: #fff
+			font-family: 'MyriadPro', sans-serif
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+		&:hover
+			@include anim(0.1s, 0s)
+			border-color: darken(#fff, 15%)
+		&:focus
+			@include anim(0.3s, 0s)
+			color: #3cd072
+			background-color: #fff
+			outline: none
+			border-color: #fff
+		&:active
+			//outline: none
+			background-color: #fff
+		&:focus::placeholder
+			color: darken(#fff, 30%)
+		&:disabled 
+			background-color: green

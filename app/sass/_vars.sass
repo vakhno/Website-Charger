@@ -1,0 +1,135 @@
+$accent: #fff
+html
+	min-width: 320px
+
+body
+	position: relative
+
+.container
+	max-width: 966px
+	height: 100%
+	margin: 0 auto
+	padding: 0 15px
+
+.container-long
+	max-width: 1480px
+	height: 100%
+	margin: 0 auto
+
+.error
+	color: #f50a0a !important
+
+.send-msg
+	transition: 0.3s
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 9999
+	display: none
+	width: 100%
+	height: 100%
+	text-align: center
+	background-color: rgba(0,0,0, 0.7)
+	&::before
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+	&__window
+		max-width: 460px
+		min-height: 330px
+		position: absolute
+		top: 50vh
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: 0.3s
+		background-color: #fff
+		padding: 40px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		display: inline-flex
+		vertical-align: middle
+	&__logo
+		margin-bottom: 15px
+	&__title
+		color: #3cd072
+		font-family: MyriadPro,sans-serif 
+		font-size: 24px
+		font-weight: 600
+		margin-bottom: 15px
+	&__text
+		color: #000
+		letter-spacing: -.03px
+		font-family: Helvetica,sans-serif 
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		max-width: 330px
+		margin-bottom: 15px
+	&__button
+		max-width: 136px
+
+@mixin anim($time, $delay)
+	-webkit-transition: all $time ease $delay
+	-moz-transition: all $time ease $delay
+	-ms-transition: all $time ease $delay
+	-o-transition: all $time ease $delay
+	transition: all $time ease $delay
+
+@mixin anim_cubic($time, $delay) 
+	-webkit-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+	-moz-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+	-ms-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+	-o-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+	transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+
+@mixin rotate($deg)
+	-moz-transform: rotate($deg)
+	-ms-transform: rotate($deg)
+	-webkit-transform: rotate($deg)
+	-o-transform: rotate($deg)
+	transform: rotate($deg)
+
+@mixin scale($num)
+	-moz-transform: scale($num)
+	-ms-transform: scale($num)
+	-webkit-transform: scale($num)
+	-o-transform: scale($num)
+	transform: scale($num)
+
+@mixin skew($num)
+	-webkit-transform: skewX($num)
+	-moz-transform: skewX($num)
+	-ms-transform: skewX($num)
+	-o-transform: skewX($num)
+	transform: skewX($num)
+
+@mixin cnt($h)
+	display: flex
+	flex-direction: column
+	height: $h
+	text-align: center
+	align-items: stretch
+	justify-content: center
+
+@mixin tr($x,$y,$z)
+	transform: translate3d($x, $y, $z)
+
+@mixin flexbox() 
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	font-size: 0
+
+@mixin flexorder($val)
+	-webkit-box-ordinal-group: $val
+	-moz-box-ordinal-group: $val
+	-ms-flex-order: $val
+	-webkit-order: $val
+	order: $val
+
+
